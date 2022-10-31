@@ -85,7 +85,11 @@ box-sizing: border-box;
     text-align: center;
 }
 .leftMiddle {
+    margin-top: 4rem;
     display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex: 1;
 }
 .buttonsContainer {
     font-family: "Bungee", cursive;
