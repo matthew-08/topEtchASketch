@@ -10,6 +10,7 @@ justify-content: center;
 align-content: center;
 background-color: rgba(255, 99, 71, 0.753);
 }
+
 .left{
     font-family: "Bungee", cursive;
     display: flex;
@@ -17,12 +18,15 @@ background-color: rgba(255, 99, 71, 0.753);
     justify-content: space-between;
     gap: 10px;
     height: 100%;
+    width: auto;
+    max-width: 400px;
     font-size: 20px;
     border: 2px solid white;
     box-sizing: border-box;
     padding: 20px;
     align-self: flex-start;
 }
+
 .wrap {
     display: flex;
     justify-content: center;
@@ -31,18 +35,21 @@ background-color: rgba(255, 99, 71, 0.753);
     width: 100%;
     gap: 20px;
 }
+
 h1 {
     margin-top: 2px;
     margin-left: 10px;
     text-align: center;
     margin-bottom: 20px;
 }
+
 .headerContainer {
     box-sizing: border-box; 
     font-size: 2.3rem;
     font-family: "Bungee", cursive;
     margin-bottom: 1rem;
 }
+
 .divWrapper {
 box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 12px;
 align-self: flex-start;
@@ -53,7 +60,6 @@ display: grid;
 grid-template-columns: repeat(16, 1fr);
 grid-template-rows: repeat(16, 1fr);
 box-sizing: border-box;
-
 }
 
 .divWrapper > * {
@@ -84,13 +90,18 @@ box-sizing: border-box;
 .p {
     text-align: center;
 }
+
 .leftMiddle {
+    text-align: center;
     margin-top: 4rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
     flex: 1;
 }
+
 .buttonsContainer {
     font-family: "Bungee", cursive;
     display: grid;
@@ -98,6 +109,7 @@ box-sizing: border-box;
     gap: 5px;
     grid-template-columns: repeat(3, 1fr);
 }
+
 .button {
     font-family: "Bungee", cursive;
     text-align: center;
@@ -108,4 +120,24 @@ box-sizing: border-box;
 
 .buttonSelect {
     box-shadow: rgba(50, 50, 93, 0.5) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;;   
+}
+
+.errorContainer {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    height: 100px;
+    text-align: center;
+}
+.errorContainer h1 {
+    font-size: 2rem;
+    color: red;
+    border-bottom: 2px solid red;
+    margin-bottom: 0.2rem;
+}
+.errorContainer > * {
+    padding: 0;
+    margin: 0%;
 }

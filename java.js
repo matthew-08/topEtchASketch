@@ -3,12 +3,37 @@ const inputNumber = document.querySelector("#numberInput");
 const resetButon = document.querySelector(".button.Reset")
 const eraseButton = document.querySelector(".button.Erase")
 const rainbowButton = document.querySelector(".button.Rainbow")
+const errorOutput = document.getElementById("errorOutput")
+const errorContainer = document.getElementsByClassName("errorContainer")
+
+let errorContainerChildren = document.querySelector(".errorContainer").children;
+
+for (var children of errorContainerChildren) {
+    children.style.display = "none"
+}
 
 
 inputNumber.addEventListener("keydown", (e) => {
     if (e.keyCode === 13) {
-        divWrapper.innerHTML = " "
+        for (var children of errorContainerChildren) {
+            children.style.display = "none"
+        }
         const userNumber = inputNumber.value;
+            if (userNumber < 16) {
+                for (var children of errorContainerChildren) {
+                    children.style.display = "block"
+                }
+                errorOutput.innerText = "Please enter a number greater than 16"
+            return
+            } else if (userNumber > 64) {
+                for (var children of errorContainerChildren) {
+                    children.style.display = "block"
+                }
+                errorOutput.innerText = "Please enter a number less than 64"
+            return
+            }
+
+        divWrapper.innerHTML = " "
         const totalSize = userNumber**2;
         console.log(totalSize);
         
