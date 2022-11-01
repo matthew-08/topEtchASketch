@@ -52,12 +52,20 @@ resetButon.addEventListener("click", () => {
 })
 
 eraseButton.addEventListener("click", () => {
+    if (divWrapper.classList.contains("rainbow")) {
+        rainbowButton.classList.toggle("buttonSelect")
+        divWrapper.classList.toggle("rainbow");
+    }
     divWrapper.classList.toggle("erase");
     eraseButton.classList.toggle("buttonSelect")
     
 })
 
 rainbowButton.addEventListener("click", () => {
+    if (divWrapper.classList.contains("erase")) {
+        eraseButton.classList.toggle("buttonSelect")
+        divWrapper.classList.toggle("erase");
+    }
     divWrapper.classList.toggle("rainbow");
     rainbowButton.classList.toggle("buttonSelect")    
 })
